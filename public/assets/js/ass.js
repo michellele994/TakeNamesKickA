@@ -4,7 +4,7 @@ $(function() {
 		const newKick = $(this).data("newkick");
 
 		const newKickState = {
-			ass_kicked: !newKick
+			ass_kicked: newKick
 		};
 
 		$.ajax("/api/asses/" + id, {
@@ -16,5 +16,22 @@ $(function() {
 
 			location.reload();
 		});
+	});
+	$(".create-form").on("submit", function(event) {
+		event.preventDefault();
+
+		var newAss = {
+			ass_name: $("#ass_name").val().trim(),
+			ass_kicked: false
+		};
+
+		$.ajax("/api/asses", {
+			type: "POST",
+			data: newAss
+		}).then(
+		function() {
+			console.log("ass has been created");
+			location.reload();
+		})
 	})
 })

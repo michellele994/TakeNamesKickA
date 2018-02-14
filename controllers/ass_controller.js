@@ -15,7 +15,7 @@ router.get("/", function(req, res) {
 	})
 });
 router.post("/api/asses", function(req, res) {
-	ass.create(["ass_name", "ass_kicked"], [req.body.ass_name, rec.body.ass_kicked], function(result) {
+	ass.create(["ass_name", "ass_kicked"], [req.body.ass_name, req.body.ass_kicked], function(result) {
 		res.json({ id: result.insertId});
 	});
 });
