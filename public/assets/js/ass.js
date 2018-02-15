@@ -19,22 +19,28 @@ $(function() {
 	});
 	$(".create-form").on("submit", function(event) {
 		event.preventDefault();
-
 		var newAss = {
 			ass_name: $("#ass_name").val().trim(),
 			ass_picture: $("input[name='pic-choice']:checked").val(),
 			ass_kicked: false
 		};
 
-		$.ajax("/api/asses", {
-			type: "POST",
-			data: newAss
-		}).then(
-		function() {
-			console.log("ass has been created");
-			location.reload();
-		})
-		$("#ass_name").val("");
-		$("input[name='pic-choice'").prop('checked', false);
+		// if(newAss.ass_name && newAss.ass_picture)
+		// {
+			$.ajax("/api/asses", {
+				type: "POST",
+				data: newAss
+			}).then(
+			function() {
+				console.log("ass has been created");
+				location.reload();
+			})
+			$("#ass_name").val("");
+			$("input[name='pic-choice'").prop('checked', false);
+		// }
+		// else
+		// {
+		// 	alert("Please enter a name and choose a picture");
+		// }
 	})
 })
