@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 const ass = require("../models/ass.js");
-// const orm = require("../config/orm.js");
 
+//ensure that all in database is being displayed
 router.get("/", function(req, res) {
 	ass.all(function(data) {
 		const hbsObject = {
@@ -19,6 +19,7 @@ router.post("/api/asses", function(req, res) {
 		res.json({ id: result.insertId});
 	});
 });
+//When new data is being placed into database
 router.put("/api/asses/:id", function(req, res) {
 	const condition = "id = " + req.params.id;
 

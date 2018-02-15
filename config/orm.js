@@ -2,6 +2,7 @@ const connection = require("../config/connection.js");
 
 const orm = {
 	selectAll: function(tableInput, cb) {
+		//select all from the database and eventually place into HTML using handlebars
 		let queryString = "SELECT * FROM " + tableInput + ";";
 		connection.query(queryString, function(err, result) {
 			if(err)
@@ -12,6 +13,7 @@ const orm = {
 		})
 	},
 	insertOne: function(table, cols, vals, cb) {
+		//add to the database and eventually place into HTML using handlebars
 		let queryString = "INSERT INTO " + table;
 		queryString += " (";
 		queryString += cols.toString();
@@ -31,6 +33,7 @@ const orm = {
 		})
 	},
 	updateOne: function(table, objColVals, condition, cb) {
+		//when ass is kicked, update the database and update HTML using handlebars
 		let queryString = "UPDATE " + table;
 		queryString += " SET ";
 		queryString += objToSql(objColVals);
@@ -47,7 +50,7 @@ const orm = {
 	}
 }
 
-
+//These were taken from 14-Week/03-Day/17-MvcExample
 function printQuestionMarks(num) {
 	let arr = [];
 	for (let i = 0; i < num; i++) {
@@ -55,7 +58,6 @@ function printQuestionMarks(num) {
 	}
 	return arr.toString();
 }
-
 function objToSql(ob) {
 	var arr = [];
 

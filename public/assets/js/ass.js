@@ -7,6 +7,7 @@ $(function() {
 			ass_kicked: newKick
 		};
 
+		//updated the database
 		$.ajax("/api/asses/" + id, {
 			type: "PUT",
 			data: newKickState
@@ -17,6 +18,7 @@ $(function() {
 			location.reload();
 		});
 	});
+	//add to the database
 	$(".create-form").on("submit", function(event) {
 		event.preventDefault();
 		var newAss = {
@@ -25,6 +27,7 @@ $(function() {
 			ass_kicked: false
 		};
 
+		//If the user has entered both a name and a picture
 		if(newAss.ass_name && newAss.ass_picture)
 		{
 			$.ajax("/api/asses", {

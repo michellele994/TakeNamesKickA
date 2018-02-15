@@ -1,5 +1,5 @@
 const orm = require("../config/orm.js");
-
+//See orm.js for more information
 const ass = {
 	all: function(cb) {
 		orm.selectAll("asses", function(res) {
