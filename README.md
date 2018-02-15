@@ -13,7 +13,7 @@ All you have to do is go to the project located here: (link).
 	* This section is to remind you that you have kicked this person's ass. That way you don't over-kick asses unnecessarily.
 
 That's it!
-Once you have finished using this application, find some new friends using this other application here: immense-beyond-78884.herokuapp.com
+Once you have finished using this application, find some new friends using this other application here: http://immense-beyond-78884.herokuapp.com
 
 Thank you!
 
