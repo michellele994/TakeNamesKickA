@@ -5,6 +5,7 @@
 			<label for = "ass_name">Enter Name: </label>
 			<input type = "text" id="ass_name" name="name">
 		</div>
+		Choose a Picture
 		<div class ="row">
 			<div class="form-check form-check-inline" id="choose-picture">
 				<div class="row text-center" id ="pic-choices">
@@ -37,7 +38,7 @@
 		{{#each asses}}
 			{{#if ass_kicked}}
 				<div class = "col-md-3">
-					<img src="/assets/img/{{ass_picture}}.png">
+					<img src="/assets/img/{{ass_picture}}kicked.png">
 					{{ass_name}}
 				</div>
 			{{/if}}

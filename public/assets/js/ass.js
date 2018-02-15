@@ -25,8 +25,8 @@ $(function() {
 			ass_kicked: false
 		};
 
-		// if(newAss.ass_name && newAss.ass_picture)
-		// {
+		if(newAss.ass_name && newAss.ass_picture)
+		{
 			$.ajax("/api/asses", {
 				type: "POST",
 				data: newAss
@@ -37,10 +37,10 @@ $(function() {
 			})
 			$("#ass_name").val("");
 			$("input[name='pic-choice'").prop('checked', false);
-		// }
-		// else
-		// {
-		// 	alert("Please enter a name and choose a picture");
-		// }
+		}
+		else
+		{
+			alert("Please enter a name and choose a picture");
+		}
 	})
 })
