@@ -11,6 +11,9 @@ h2 {
 	font-size: 24px;
 	font-weight: bold;
 }
+button {
+	margin: 10px;
+}
 .row {
 	margin: 0 auto;
 }
@@ -26,4 +29,16 @@ h2 {
 	/*position: absolute;*/
 	/*top: 20%;*/
 	text-align: center;
+}
+input[name = "pic-choice"] { /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+input + label > img{
+	opacity: .6;
+}
+
+input:checked + label > img{ /* (RADIO CHECKED) IMAGE STYLES */
+  opacity: 1;
 }

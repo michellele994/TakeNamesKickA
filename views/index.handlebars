@@ -3,12 +3,11 @@
 	<div class="row">
 		<ul>
 			{{#each asses}}
-				<div class="col-md-3">
-					{{#unless ass_kicked}}
-						<img src="http://via.placeholder.com/75x75">
+				{{#unless ass_kicked}}
+					<div class="col-md-3">
 						{{> asses/ass-block ass_kicked=true}}
-					{{/unless}}
-				</div>
+					</div>
+				{{/unless}}
 			{{/each}}
 		</ul>
 	</div>
@@ -21,17 +20,11 @@
 			<input type = "text" id="ass_name" name="name">
 		</div>
 		<div class ="row">
-			<div class="col-md-3">
-				<img src="http://via.placeholder.com/75x75">
-			</div>
-			<div class="col-md-3">
-				<img src="http://via.placeholder.com/75x75">
-			</div>
-			<div class="col-md-3">
-				<img src="http://via.placeholder.com/75x75">
-			</div>
-			<div class="col-md-3">
-				<img src="http://via.placeholder.com/75x75">
+			<div class="form-check form-check-inline" id="choose-picture">
+				<div class="row text-center" id ="pic-choices">
+					<div id = "pic-choices">
+					</div>
+				</div>
 			</div>
 		</div>
 		<button type="submit">Take Name</button>
@@ -42,12 +35,12 @@
 
 	<ul>
 		{{#each asses}}
-			<div class = "col-md-3">
-				{{#if ass_kicked}}
-					<img src="http://via.placeholder.com/75x75">
-					{{> asses/ass-block ass_kicked=false}}
-				{{/if}}
-			</div>
+			{{#if ass_kicked}}
+				<div class = "col-md-3">
+					<img src="/assets/img/{{ass_picture}}.png">
+					{{ass_name}}
+				</div>
+			{{/if}}
 		{{/each}}
 	</ul>
 </div>

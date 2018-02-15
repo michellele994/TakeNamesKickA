@@ -22,5 +22,38 @@
 				{{{ body }}}
 			</div>
 		</div>
+		<script type="text/javascript">
+		let picChoices = [];
+		for (let i = 0; i < 12; i++)
+		{
+			picChoices.push("<img src = '/assets/img/"+i+".png'>");
+		}
+		let div = $("<div>");
+		div.addClass("col-md-3");
+		for (let i = 0; i < picChoices.length; i++)
+		{
+			var column = $("<div>");
+			column.addClass("col-sm-3");
+			column.attr("id", "pic-col"+i);
+			$("#pic-choices").append(column);
+
+			var input = $("<input>");
+			input.addClass("form-check-input hidden-radio");
+			input.attr("type", "radio");
+			input.attr("name", "pic-choice");
+			input.attr("id", "pic-radio"+i);
+			input.attr("value", i);
+			$("#pic-col"+i).append(input);
+
+			var label = $("<label>");
+			label.addClass("form-check-label");
+			label.attr("id", "pic-label"+i);
+			label.attr("for", "pic-radio"+i);
+			$("#pic-col"+i).append(label);
+
+			$("#pic-label"+i).append(picChoices[i]);
+
+		}
+		</script>
 	</body>
 <html>

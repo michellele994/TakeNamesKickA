@@ -22,6 +22,7 @@ $(function() {
 
 		var newAss = {
 			ass_name: $("#ass_name").val().trim(),
+			ass_picture: $("input[name='pic-choice']:checked").val(),
 			ass_kicked: false
 		};
 
@@ -33,5 +34,7 @@ $(function() {
 			console.log("ass has been created");
 			location.reload();
 		})
+		$("#ass_name").val("");
+		$("input[name='pic-choice'").prop('checked', false);
 	})
 })
