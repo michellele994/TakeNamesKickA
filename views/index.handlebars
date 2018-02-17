@@ -23,7 +23,7 @@
 		<ul>
 			{{#each asses}}
 				{{#unless ass_kicked}}
-					<div class="col-md-3">
+					<div class="col-md-3 ass-kicked-pic">
 						{{> asses/ass-block ass_kicked=true}}
 					</div>
 				{{/unless}}
@@ -37,7 +37,7 @@
 	<ul>
 		{{#each asses}}
 			{{#if ass_kicked}}
-				<div class = "col-md-3">
+				<div class = "col-md-3 ass-kicked-pic">
 					<img src="/assets/img/{{ass_picture}}kicked.png">
 					{{ass_name}}
 				</div>
