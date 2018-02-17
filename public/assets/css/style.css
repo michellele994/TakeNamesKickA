@@ -37,7 +37,7 @@ li {
 	text-align: center;
 }
 .ass-kicked-pic {
-	padding-bottom: 100px;
+	min-width: 100px;
 }
 input[name = "pic-choice"] { /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
