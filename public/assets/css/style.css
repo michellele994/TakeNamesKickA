@@ -37,7 +37,7 @@ li {
 	text-align: center;
 }
 .names {
-	min-height: 100px;
+	min-height: 300px;
 }
 input[name = "pic-choice"] { /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
