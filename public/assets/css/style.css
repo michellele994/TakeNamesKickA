@@ -39,6 +39,9 @@ li {
 .names {
 	min-height: 125px;
 }
+.name-wrap {
+	word-wrap: break-word;
+}
 input[name = "pic-choice"] { /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */

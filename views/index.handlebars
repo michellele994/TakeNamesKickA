@@ -3,7 +3,7 @@
 	<form class = "create-form">
 		<div class = "form-group">
 			<label for = "ass_name">Enter Name: </label>
-			<input type = "text" id="ass_name" name="name" maxlength="20">
+			<input type = "text" id="ass_name" name="name" maxlength="15">
 		</div>
 		Choose a Picture
 		<div class ="row">
@@ -39,7 +39,7 @@
 			{{#if ass_kicked}}
 				<div class = "col-sm-3 names">
 					<img src="/assets/img/{{ass_picture}}kicked.png"><br>
-					{{ass_name}}
+					<p class = "name-wrap">{{ass_name}}</p>
 				</div>
 			{{/if}}
 		{{/each}}
